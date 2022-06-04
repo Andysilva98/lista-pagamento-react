@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 30px;
+    background:  rgb(0, 0, 56);
+    
+    border-bottom: 1px solid #fff;
+}
+
+.img{
+    border-radius: 100%;
+    max-width: 100px;
+    margin-right: 20px;
+    transition: .2s;
+}
+
+.text{
+    color: #fff;
+}
+
+.button{
+    margin-left: auto;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button:hover, .img:hover{
+    transform: scale(1.1);
+}
+
