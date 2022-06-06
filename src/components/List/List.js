@@ -1,4 +1,7 @@
 import styles from "./List.module.css";
+import Button from "../Button/Button";
+import PopUp from "../PopUp/PopUp";
+
 import { useState, useEffect } from "react";
 
 export default function List() {
@@ -21,7 +24,12 @@ export default function List() {
             <div>{user.name}</div>
             <div>{`ID: ${user.id} - Username: ${user.username}`} </div>
           </div>
-          <button className={styles.button}>Pagar</button>
+          <Button
+            id={user.id}
+            text="Pagar"
+            name={user.name}
+            onClick={() => <PopUp name={user.name} />}
+          />
         </div>
       ))}
     </>

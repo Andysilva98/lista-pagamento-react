@@ -3,8 +3,7 @@
     flex-direction: row;
     align-items: center;
     padding: 15px 30px;
-    background:  rgb(0, 0, 56);
-    
+    background:  #2c2e44;
     border-bottom: 1px solid #fff;
 }
 
@@ -17,6 +16,7 @@
 
 .text{
     color: #fff;
+    margin-right: auto;
 }
 
 .button{
@@ -26,7 +26,7 @@
     transition: .2s;
 }
 
-.button:hover, .img:hover{
+.img:hover{
     transform: scale(1.1);
 }
 

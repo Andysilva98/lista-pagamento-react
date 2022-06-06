@@ -1,6 +1,6 @@
 import "./App.css";
 import List from "./components/List/List";
-import User from "./components/User/User";
+import PopUp from "./components/PopUp/PopUp";
 
 function App() {
   return (
