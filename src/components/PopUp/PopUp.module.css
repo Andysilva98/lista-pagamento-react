@@ -1,11 +1,14 @@
 .background{
     z-index: 10;
     height: 100vh;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
+    left: 0;
+    position: fixed;
 }
 
 .modal{
@@ -17,6 +20,8 @@
 padding: 20px;
 background-color: #474a6e;
 color: #fff;
+display: flex;
+align-items: center;
 
 }
 
@@ -28,3 +33,11 @@ color: #fff;
     justify-content: center;
 
 }
+p{
+    margin-right: auto;
+}
+
+span{
+    color: rgb(196, 196, 8);
+}
+

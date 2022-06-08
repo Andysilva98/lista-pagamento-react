@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function List() {
   const [users, setUsers] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     fetch("https://www.mocky.io/v2/5d531c4f2e0000620081ddce") //fetch busca os dados de uma api ou documento externo
@@ -20,18 +21,22 @@ export default function List() {
       {users.map((user) => (
         <div className={styles.container} key={user.id}>
           <img className={styles.img} src={user.img} />
+
           <div className={styles.text}>
             <div>{user.name}</div>
             <div>{`ID: ${user.id} - Username: ${user.username}`} </div>
           </div>
+
           <Button
+            type="submit"
             id={user.id}
             text="Pagar"
             name={user.name}
-            onClick={() => <PopUp name={user.name} />}
+            onClick={() => setShowModal(user)}
           />
         </div>
       ))}
+      {showModal && <PopUp user={showModal} setShowModal={setShowModal} />}
     </>
   );
 }
