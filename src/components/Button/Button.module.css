@@ -2,6 +2,7 @@
     padding: 4px 8px;
     cursor: pointer;
     transition: .2s;
+    width: 60px;
 }
 
 .button:hover{
