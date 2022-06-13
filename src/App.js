@@ -1,6 +1,5 @@
 import "./App.css";
 import List from "./components/List/List";
-import PopUp from "./components/PopUp/PopUp";
 
 function App() {
   return (

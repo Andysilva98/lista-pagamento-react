@@ -20,7 +20,7 @@ export default function List() {
     <>
       {users.map((user) => (
         <div className={styles.container} key={user.id}>
-          <img className={styles.img} src={user.img} />
+          <img className={styles.img} src={user.img} alt="" />
 
           <div className={styles.text}>
             <div>{user.name}</div>

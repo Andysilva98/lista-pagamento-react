@@ -9,7 +9,6 @@ export default function PopUp({ user, setShowModal }) {
   const [inputValue, setInputValue] = useState("");
   const [inputOption, setInputOption] = useState("");
   const [i, setI] = useState("");
-  const [formValues, setFormValues] = useState({});
   const [transaction, setTransaction] = useState("");
 
   useEffect(() => {
@@ -27,7 +26,7 @@ export default function PopUp({ user, setShowModal }) {
   function submit(e) {
     e.preventDefault();
 
-    if (inputValue == "" || inputValue == "0,00") {
+    if (inputValue === "" || inputValue === "0,00") {
       alert("Preencha todos os campos!");
       return;
     }
@@ -59,7 +58,7 @@ export default function PopUp({ user, setShowModal }) {
 
   function formatCurrency(v) {
     console.log("valor do " + v);
-    if (v == "") {
+    if (v === "") {
       return;
     }
     let value = v + "";
@@ -67,9 +66,9 @@ export default function PopUp({ user, setShowModal }) {
     value = parseInt(value.replace(/[^0-9]+/g, ""));
     value = value + "";
 
-    if (value.length == 1) {
+    if (value.length === 1) {
       value = value.replace(/([0-9]{1})$/g, "0,0$1");
-    } else if (value.length == 2) {
+    } else if (value.length === 2) {
       value = value.replace(/([0-9]{2})$/g, "0,$1");
     } else if (value.length > 2) {
       value = value.replace(/([0-9]{2}$)/g, ",$1");
@@ -85,7 +84,7 @@ export default function PopUp({ user, setShowModal }) {
       value = inicio + final;
     }
 
-    if (value == "NaN") value = "";
+    if (value === "NaN") value = "";
     setInputValue(value);
     return inputValue;
   }
